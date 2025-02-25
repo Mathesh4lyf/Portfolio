@@ -1,0 +1,8 @@
+
+@import "tailwindcss";
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+}
