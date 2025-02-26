@@ -6,7 +6,7 @@ import "tailwindcss";
 const Navbar = () => {
   return (
     <div className='navbar'>
-        <img src={logo} alt="" className='navbar h-32'/>
+       <img src={logo} alt="" className="absolute -left-4 top-0 h-24 w-auto object-contain" />
         <ul className="nav-menu">
             <li>Home</li>
             <li>About Me</li>
