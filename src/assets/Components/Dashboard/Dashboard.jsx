@@ -14,17 +14,18 @@ const Dashboard = () => {
   />
 
   <h1 className="font-bold text-3xl text-center text-white">
-    I'm Samuel Mathenge, Full Stack developer based in Kenya.
+    <span>I'm Samuel Mathenge,</span> Full Stack developer based in Kenya.
   </h1>
 
   <p className="text-center text-white">
-    I am a Full Stack Developer from Kenya with years of experience in developing websites and apps using various languages.
+    I am a Full Stack Developer from Kenya with years of experience in developing websites and apps using various programming languages and platforms.
   </p>
 
-  <div className="dashboard-action flex space-x-4">
-    <div className="dashboard-connect text-white">Connect with me</div>
-    <div className="dashboard-resume text-white">My resume</div>
-  </div>
+  <div class="dashboard-container space-y-4">
+  <div class="dashboard-connect text-white">Connect with me</div>
+  <div class="dashboard-resume text-white">My resume</div>
+</div>
+
 </div>
 
     </div>
