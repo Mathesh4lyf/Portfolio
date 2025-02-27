@@ -1,12 +1,15 @@
-// import React from 'react'
-import Dashboard from "./assets/Components/Dashboard/Dashboard"
-import Navbar from "./assets/Components/Navbar/Navbar"
+import {About, Dashboard} from "./pages"
+import {Navbar} from "./Components"
+
+import "tailwindcss";
+
  
 const App = () =>{
   return(
     <div>
       <Navbar/>
       <Dashboard/>
+      <About/>
     </div>
   )
 }
