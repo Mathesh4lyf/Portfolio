@@ -20,6 +20,9 @@ const Navbar = () => {
           <a href="#services">Services</a>
         </li>
         <li>
+          <a href="#mywork">Services</a>
+        </li>
+        <li>
           <a href="">Portfolio</a>
         </li>
         <li>

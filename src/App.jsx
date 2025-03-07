@@ -1,4 +1,4 @@
-import { About, Dashboard, Services } from "./pages";
+import { About, Dashboard, Services, MyWork } from "./pages";
 import { Navbar } from "./Components";
 
 import "tailwindcss";
@@ -10,6 +10,7 @@ const App = () => {
       <Dashboard />
       <About />
       <Services />
+      <MyWork />
     </div>
   );
 };
