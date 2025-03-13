@@ -6,3 +6,6 @@ export { default as bookBros } from "./Book-Bros.png";
 export { default as poetryHub } from "./Poetry-Hub.png";
 export { default as pimoPizzaPalace } from "./Pimo-Pizza-Palace.png";
 export { default as taskTrainApi } from "./Task-Train-API.png";
+export { default as emailIcon } from "./emailIcon.png";
+export { default as phoneCall } from "./phoneCall.webp";
+export { default as locationIcon } from "./locationIcon.jpg";

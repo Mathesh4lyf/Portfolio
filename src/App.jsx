@@ -1,7 +1,8 @@
-import { About, Dashboard, Services, MyWork } from "./pages";
+import { About, Dashboard, Services, MyWork, Contact } from "./pages";
 import { Navbar } from "./Components";
 
 import "tailwindcss";
+// import Contact from "./pages/Contact/Contact";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <About />
       <Services />
       <MyWork />
+      <Contact />
     </div>
   );
 };
