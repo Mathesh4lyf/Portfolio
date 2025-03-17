@@ -45,5 +45,6 @@ export const myWorkData = [
     id: 6,
     name: "Inventory Managment System",
     desc: " This is a food inventory managment system for a food company by the name 'Promasidor' that deals with dairy products, wheat products, cerals and other food stuffs",
+    github: "https://github.com/Mathesh4lyf/FinalYearProject",
   },
 ];
