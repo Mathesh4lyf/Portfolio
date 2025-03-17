@@ -1,5 +1,5 @@
 import React from "react";
-import "./Services.css";
+import "./services.css";
 import { serviceData } from "../../assets/services_data";
 import { services } from "../../assets";
 
