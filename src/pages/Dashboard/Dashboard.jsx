@@ -9,7 +9,7 @@ const Dashboard = () => {
         <img
           src={profilePic}
           alt="profile-pic"
-          className="h-24 w-24 rounded-full object-cover" // Centered image and make it circular
+          className="h-24 w-24 rounded-full object-contain" // Centered image and make it circular
         />
 
         <h1 className="font-bold text-3xl text-center text-white">

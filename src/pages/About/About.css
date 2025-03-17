@@ -18,13 +18,19 @@
   flex-direction: column;
   gap: 80px;
 }
-about-para {
+.about-para {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  font-size: 24px;
+  gap: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
+  line-height: 1.6;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
 }
+
 .about-skills {
   display: flex;
   flex-direction: column;
@@ -38,7 +44,7 @@ about-para {
 }
 .about-skill p {
   min-width: 150px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
 }
 .about-skill hr {
@@ -63,7 +69,7 @@ about-para {
   transition: 0.5s;
 }
 .about-achievement h1 {
-  font-size: 60px;
+  font-size: 34px;
   font-weight: 700;
   background: linear-gradient(270deg, #df8908 50.41%, #b415ff 90.25%);
   background-clip: text;

@@ -6,11 +6,14 @@ const About = () => {
   return (
     <div className="about" id="about">
       <div className="about-title">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4 ">About me</h1>
+        <h1 className="text-4xl font-bold text-white mb-6 tracking-wide">
+          About Me
+        </h1>
+
         <img
           src={profilePic}
           alt="profile-pic"
-          className="h-24 w-24 rounded-full object-cover"
+          className="h-40 w-40 rounded-full object-contain"
         />
       </div>
       <div className="about-section">

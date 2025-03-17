@@ -34,7 +34,7 @@
 .services-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  gap: 30px;
   margin: 80px;
 }
 .services-format h3 {
@@ -42,7 +42,7 @@
   font-weight: 600;
 }
 .services-format h2 {
-  font-size: 38px;
+  font-size: 28px;
   font-weight: 800;
   background: linear-gradient(270deg, #df8908 50%, #b415ff 100%);
   background-clip: text;
@@ -52,6 +52,9 @@
 .services-format p {
   color: #d4d4d4;
   line-height: 30x;
+  max-width: 300px;
+  font-size: 18px;
+  line-height: 32px;
   max-width: 300px;
 }
 .services-readmore {
