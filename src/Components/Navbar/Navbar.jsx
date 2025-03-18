@@ -1,9 +1,16 @@
+import { useState } from "react"; // Import the useState hook for managing mobile menu state
 import "./Navbar.css";
 // import { logo } from "../../assets";
 
 const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(false); // State to track if menu is open
+
+  const toggleMenu = () => {
+    setIsMobile(!isMobile); // Toggle mobile menu visibility
+  };
+
   return (
-    <header className="navbar">
+    <header className={`navbar ${isMobile ? "mobile" : ""}`}>
       {/* <img
         src={logo}
         alt=""
@@ -33,6 +40,19 @@ const Navbar = () => {
         <a href="#contact" className="connect-link">
           Connect With Me
         </a>
+      </div>
+
+      {/* Mobile Hamburger Menu */}
+      <div className="nav-mob-icon" onClick={toggleMenu}>
+        {/* Simple hamburger icon */}
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+
+      {/* Mobile close button */}
+      <div className="nav-mob-close" onClick={toggleMenu}>
+        <span className="close-icon">X</span>
       </div>
     </header>
   );
