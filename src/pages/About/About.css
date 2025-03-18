@@ -1,3 +1,6 @@
+/* About.css */
+
+/* General Styles */
 .about {
   display: flex;
   flex-direction: column;
@@ -5,19 +8,28 @@
   justify-content: center;
   gap: 80px;
   margin: 80px 170px;
+  padding: 20px; /* Adding padding for better spacing on mobile */
 }
+
 .about-title {
   position: relative;
+  text-align: center;
 }
+
 .about-section {
   display: flex;
   gap: 80px;
+  width: 100%; /* Ensuring full width */
+  flex-wrap: wrap; /* Allowing elements to wrap on smaller screens */
 }
+
 .about-right {
   display: flex;
   flex-direction: column;
   gap: 80px;
+  width: 100%; /* Ensuring full width */
 }
+
 .about-para {
   display: flex;
   flex-direction: column;
@@ -36,17 +48,20 @@
   flex-direction: column;
   gap: 20px;
 }
+
 .about-skill {
   display: flex;
   gap: 50px;
   align-items: center;
   transition: 0.3s;
 }
+
 .about-skill p {
   min-width: 150px;
   font-size: 20px;
   font-weight: 500;
 }
+
 .about-skill hr {
   outline: none;
   border: none;
@@ -55,12 +70,14 @@
   border-radius: 50px;
   background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
 }
+
 .about-achievements {
   display: flex;
   width: 100%;
   justify-content: space-around;
   margin-bottom: 80px;
 }
+
 .about-achievement {
   display: flex;
   flex-direction: column;
@@ -68,6 +85,7 @@
   gap: 10px;
   transition: 0.5s;
 }
+
 .about-achievement h1 {
   font-size: 34px;
   font-weight: 700;
@@ -76,15 +94,77 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .about-achievement p {
   font-size: 22px;
   font-weight: 500;
 }
+
+/* Hover Effects */
 .about-skill:hover {
   transform: scale(1.05);
   transition: 0.3s;
 }
+
 .about-achievement:hover {
   transform: scale(1.12);
   transition: 0.5s;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  /* About Section Layout */
+  .about {
+    margin: 20px 30px; /* Adjust margin for smaller screens */
+  }
+
+  .about-section {
+    flex-direction: column; /* Stack text and image vertically */
+    gap: 40px;
+  }
+
+  .about-right {
+    gap: 20px; /* Reduce gap between sections */
+  }
+
+  /* About Text */
+  .about-para {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+    padding: 10px;
+  }
+
+  /* About Skills */
+  .about-skills {
+    gap: 15px;
+  }
+
+  .about-skill {
+    gap: 30px; /* Reduce gap between skills */
+  }
+
+  .about-skill p {
+    min-width: 120px; /* Reduce width for smaller screens */
+    font-size: 16px;
+  }
+
+  /* Achievements */
+  .about-achievements {
+    flex-direction: column; /* Stack achievements vertically */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-achievement h1 {
+    font-size: 28px; /* Smaller font size for mobile */
+  }
+
+  .about-achievement p {
+    font-size: 18px;
+  }
+
+  /* Profile Pic */
+  .about-title img {
+    height: 120px;
+    width: 120px; /* Adjust image size for smaller screens */
+  }
 }

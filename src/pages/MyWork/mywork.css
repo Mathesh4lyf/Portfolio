@@ -1,3 +1,4 @@
+/* General MyWork Styles */
 .mywork {
   border: 1px solid #ccc;
   padding: 20px;
@@ -107,6 +108,7 @@
   cursor: pointer;
 }
 
+/* Keyframe for slide animation */
 @keyframes slideUpCubiBezier {
   0% {
     transform: translateY(100%);
@@ -125,4 +127,100 @@
 .animation-delay-2 {
   animation-delay: 2s;
 }
-/* @media(max-width:768px) */
+
+/* Media Query for Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  /* MyWork Title */
+  .mywork-title h1 {
+    font-size: 40px; /* Smaller font size on mobile */
+    padding: 0px 20px; /* Reduce padding */
+  }
+
+  .mywork-title img {
+    width: 4rem; /* Make image smaller on mobile */
+    height: 4rem; /* Maintain aspect ratio */
+    bottom: 10px; /* Adjust the positioning */
+    right: 10px; /* Adjust the positioning */
+  }
+
+  /* MyWork Container */
+  .mywork-container {
+    flex-direction: column;
+    gap: 15px; /* Reduce gap between elements */
+  }
+
+  /* Flexbox Row Adjustments */
+  .md\\:flex-row {
+    flex-direction: column; /* Stack items vertically on mobile */
+  }
+
+  .md\\:w-1\\/2 {
+    width: 100%; /* Make items take full width on mobile */
+  }
+
+  /* Spacing Adjustments */
+  .mt-8,
+  .mt-12 {
+    margin-top: 1.5rem; /* Reduced margin on mobile */
+  }
+
+  /* Text Size Adjustments */
+  .text-4xl {
+    font-size: 1.5rem; /* Smaller font size */
+  }
+
+  .text-xl {
+    font-size: 1rem; /* Reduce font size for better readability */
+  }
+
+  .leading-7 {
+    line-height: 1.5rem; /* Adjust line-height for mobile */
+  }
+
+  .mb-6 {
+    margin-bottom: 1rem; /* Reduce margin between sections */
+  }
+
+  .mb-4 {
+    margin-bottom: 0.75rem; /* Reduce margin between elements */
+  }
+
+  /* Button Adjustments */
+  .rounded-xl {
+    padding: 10px 30px; /* Reduce padding for buttons on mobile */
+  }
+
+  /* Shadow Effect */
+  .shadow-xl {
+    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Hover Effects */
+  .hover\\:opacity-70:hover {
+    opacity: 0.8; /* Adjust hover opacity for better visibility */
+  }
+
+  .hover\\:-translate-y-1:hover {
+    transform: translateY(-0.2rem); /* Slight hover effect */
+  }
+
+  /* General Spacing and Font Size Adjustments */
+  .text-neutral-600 {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .dark\\:text-neutral-400 {
+    font-size: 12px; /* Adjust font size */
+  }
+
+  /* Transition Effects */
+  .transition-transform {
+    transition: transform 0.2s ease-in-out; /* Faster transition */
+  }
+
+  /* Cursor Pointer */
+  .cursor-pointer {
+    font-size: 14px; /* Make the cursor text smaller */
+  }
+}

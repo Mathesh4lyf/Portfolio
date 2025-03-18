@@ -1,17 +1,27 @@
 @import "tailwindcss";
+
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 20px 170px;
+  position: relative; /* To position the hamburger icon */
 }
+
 .nav-menu {
   display: flex;
   align-items: center;
   list-style: none;
   gap: 60px;
   font-size: 20px;
+  margin: 0;
 }
+
 .nav-connect {
   padding: 20px 40px;
   border-radius: 50px;
@@ -20,74 +30,95 @@
   cursor: pointer;
   transition: 0.5s;
 }
+
 .nav-connect:hover {
   transform: scale(1.05);
 }
-html {
-  scroll-behavior: smooth;
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
 }
-.nav-mob-close {
-  display: none;
+
+.hamburger-menu span {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
 }
 
-/* Mobile responsiveness */
-/* @media (max-width: 768px) { */
-  /* .navbar { */
-    /* margin: 20px 20px; Reduced margin for smaller screens
-    flex-direction: column;
-    align-items: flex-start;
-  } */
+/* Mobile Menu: Initially hidden, visible when toggled */
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 
-  /* .nav-menu {
-    flex-direction: column;
-    gap: 20px; /* Adjust the gap for smaller screens */
-    /* font-size: 18px; Reduce font size */
-    /* margin-top: 10px; */
-  /* } */ */
+.nav-menu.show {
+  display: flex; /* Show the menu when toggled */
+  flex-direction: column; /* Stack items vertically on mobile */
+  width: 100%;
+  text-align: center;
+}
 
-  /* .nav-connect {
+.nav-menu li {
+  padding: 10px 0;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .navbar {
+    margin: 10px 20px; /* Reduce margin on mobile */
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align left on mobile */
+  }
+
+  /* Show hamburger menu on small screens */
+  .hamburger-menu {
+    display: flex;
+  }
+
+  /* Hide the regular nav menu on mobile by default */
+  .nav-menu {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-menu.show {
+    display: flex; /* Show the nav menu when toggled */
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-connect {
+    margin-top: 20px;
     width: 100%;
     text-align: center;
-    padding: 15px 30px;
-    font-size: 18px; /* Adjust font size */
-  /* } */ 
+  }
+}
 
-  /* Show the mobile menu close button */
-  /* .nav-mob-close {
-    display: block;
-    cursor: pointer;
-  } */
-
-  /* Add a mobile hamburger menu */
-  /* .navbar .nav-menu {
-    display: none; Hide the menu by default on mobile */
-  /* } */
-
-  /* .navbar.mobile .nav-menu {
-    display: flex; Show the menu when mobile menu is activated */
-    /* flex-direction: column;
-    width: 100%;
-    background-color: #fff;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    padding: 20px;
-    border-radius: 10px;
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .navbar {
+    margin: 20px 170px; /* Restore margin for larger screens */
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  .navbar.mobile .nav-menu li {
-    text-align: center;
-    margin-bottom: 15px;
+  .nav-menu {
+    display: flex;
+    gap: 60px;
+    flex-direction: row;
   }
-} */
 
-/* For very small devices (phones in portrait mode) */
-/* @media (max-width: 480px) {
-  .nav-menu { */
-    /* gap: 15px; Adjust the gap for even smaller screens */
-  /* } */
-
-  /* .nav-connect {
-    padding: 10px 20px; */
-    /* font-size: 16px; Adjust font size for small screens
+  .nav-connect {
+    margin-top: 0;
   }
+
+  /* Hide hamburger menu on larger screens */
+  .hamburger-menu {
+    display: none;
+  }
+}

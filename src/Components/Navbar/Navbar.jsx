@@ -1,15 +1,30 @@
+import React, { useState } from "react";
 import "./Navbar.css";
 // import { logo } from "../../assets";
 
 const Navbar = () => {
+  // State to toggle mobile menu visibility
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="navbar">
       {/* <img
         src={logo}
-        alt=""
+        alt="Logo"
         className="absolute -left-4 top-0 h-24 w-auto object-contain"
       /> */}
-      <ul className="nav-menu">
+      {/* Hamburger Icon */}
+      <div className="hamburger-menu" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul className={`nav-menu ${isMenuOpen ? "show" : ""}`}>
         <li>
           <a href="#dashboard">Home</a>
         </li>
@@ -29,6 +44,7 @@ const Navbar = () => {
           <a href="#contact">Contacts</a>
         </li>
       </ul>
+
       <div className="nav-connect">
         <a href="#contact" className="connect-link">
           Connect With Me

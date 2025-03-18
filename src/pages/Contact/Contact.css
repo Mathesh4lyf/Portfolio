@@ -1,3 +1,6 @@
+/* Contact.css */
+
+/* General Styles */
 .contact {
   display: flex;
   flex-direction: column;
@@ -5,30 +8,41 @@
   justify-content: center;
   gap: 80px;
   margin: 80px 170px;
+  padding: 20px; /* Adding padding for better spacing on mobile */
 }
+
 .contact-title {
   position: relative;
+  text-align: center; /* Center text for smaller screens */
 }
+
 .contact-title h1 {
   padding: 0px 30px;
   font-size: 80px;
   font-weight: 600;
 }
+
 .contact-title img {
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: -1;
 }
+
 .contact-section {
   display: flex;
   gap: 150px;
+  width: 100%;
+  flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
 }
+
 .contact-left {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 100%;
 }
+
 .contact-left h1 {
   font-size: 80px;
   font-weight: 700;
@@ -37,12 +51,14 @@
   -webkit-background-clip: text;
   -webkit-animation-fill-color: transparent;
 }
+
 .contact-left p {
   max-width: 550px;
   color: #d8d8d8;
   font-size: 20px;
   line-height: 30px;
 }
+
 .contact-details {
   display: flex;
   flex-direction: column;
@@ -50,38 +66,37 @@
   color: #d8d8d8;
   font-size: 22px;
 }
+
 .contact-right {
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 30px;
+  width: 100%;
 }
+
 .contact-right label {
   color: #d8d8d8;
   font-size: 22px;
   font-weight: 500;
 }
-.contact-right input {
+
+.contact-right input,
+.contact-right textarea {
   border: none;
-  width: 700px;
-  height: 78px;
   padding-left: 20px;
   border-radius: 4px;
   background: #32323c;
   color: #a0a0a0;
   font-family: Outfit;
   font-size: 20px;
+  width: 700px; /* Default width */
 }
+
 .contact-right textarea {
-  width: 650px;
-  border: none;
   padding: 25px;
-  border-radius: 4px;
-  background: #32323c;
-  color: #a0a0a0;
-  font-family: Outfit;
-  font-size: 20px;
 }
+
 .contact-submit {
   border: none;
   color: white;
@@ -93,18 +108,13 @@
   cursor: pointer;
   transition: 0.3s;
 }
+
 .contact-submit:hover {
   transform: scale(1.1);
   transition: 0.3s;
 }
-html {
-  scroll-behavior: smooth;
-}
-.result-message {
-  color: green;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+
+/* Popup message for form result */
 .popup-message {
   position: fixed;
   top: 20px;
@@ -133,5 +143,60 @@ html {
   100% {
     opacity: 0;
     transform: translateY(-10px);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  /* Contact Section Layout */
+  .contact {
+    margin: 20px 30px; /* Reduce margin for mobile */
+  }
+
+  .contact-title h1 {
+    font-size: 40px; /* Reduce font size for the title */
+    padding: 0 20px; /* Adjust padding for mobile */
+  }
+
+  .contact-section {
+    flex-direction: column; /* Stack the left and right sections vertically */
+    gap: 40px; /* Reduce gap between sections */
+  }
+
+  /* Contact Left Section */
+  .contact-left {
+    width: 100%;
+  }
+
+  .contact-left h1 {
+    font-size: 40px; /* Reduce heading font size */
+  }
+
+  .contact-left p {
+    font-size: 16px; /* Adjust paragraph font size */
+    line-height: 1.6;
+  }
+
+  /* Contact Form Inputs */
+  .contact-right input,
+  .contact-right textarea {
+    width: 100%; /* Make input fields take full width */
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .contact-right textarea {
+    padding: 20px; /* Adjust padding for better readability */
+  }
+
+  .contact-submit {
+    width: 100%; /* Make the submit button full width */
+    padding: 15px;
+    font-size: 18px; /* Adjust font size */
+  }
+
+  /* Adjust the popup message for mobile */
+  .popup-message {
+    font-size: 14px; /* Adjust font size for mobile */
+    padding: 8px 16px;
   }
 }

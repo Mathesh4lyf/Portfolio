@@ -1,3 +1,4 @@
+/* General Services Styles */
 .services {
   display: flex;
   flex-direction: column;
@@ -6,20 +7,24 @@
   gap: 80px;
   margin: 80px 170px;
 }
+
 .services-title {
   position: relative;
 }
+
 .services-title h1 {
   padding: 0px 30px;
   font-size: 80px;
   font-weight: 600;
 }
+
 .services-title img {
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: -1;
 }
+
 .services-format {
   display: flex;
   flex-direction: column;
@@ -31,16 +36,19 @@
   transition: 0.4s;
   cursor: pointer;
 }
+
 .services-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   margin: 80px;
 }
+
 .services-format h3 {
   font-size: 28px;
   font-weight: 600;
 }
+
 .services-format h2 {
   font-size: 28px;
   font-weight: 800;
@@ -49,23 +57,86 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .services-format p {
   color: #d4d4d4;
   line-height: 30x;
   max-width: 300px;
   font-size: 18px;
   line-height: 32px;
-  max-width: 300px;
 }
+
 .services-readmore {
   display: flex;
   gap: 20px;
   align-items: center;
   margin-top: 20px;
 }
+
 .services-format:hover {
   background-image: linear-gradient(45deg, #3f0028, #582305);
   border: 2px solid #ff0fff;
   transform: scale(1.05);
   transition: 0.4s;
+}
+
+/* Mobile Responsive Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Services Section */
+  .services {
+    margin: 40px 20px; /* Reduce margin for mobile */
+    gap: 50px; /* Reduced gap between sections */
+  }
+
+  /* Title Adjustments */
+  .services-title h1 {
+    font-size: 40px; /* Smaller font size for mobile */
+    padding: 0px 20px; /* Reduced padding */
+  }
+
+  .services-title img {
+    width: 5rem; /* Make the image smaller on mobile */
+    height: 5rem;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Services Format Box */
+  .services-format {
+    padding: 30px; /* Reduced padding inside each box */
+  }
+
+  /* Services Container (Grid Layout) */
+  .services-container {
+    grid-template-columns: 1fr; /* Stack the services vertically on mobile */
+    gap: 20px; /* Reduced gap between the grid items */
+    margin: 20px; /* Reduced margin */
+  }
+
+  /* Services Format Heading */
+  .services-format h3 {
+    font-size: 24px; /* Smaller font size */
+  }
+
+  .services-format h2 {
+    font-size: 24px; /* Smaller font size */
+    line-height: 32px; /* Slightly adjusted line-height */
+  }
+
+  /* Service Description Text */
+  .services-format p {
+    font-size: 16px; /* Smaller font size for mobile */
+    max-width: 100%; /* Make text container full width */
+  }
+
+  /* "Read More" Button */
+  .services-readmore {
+    gap: 15px; /* Reduce gap between the elements */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  /* Hover effect */
+  .services-format:hover {
+    transform: scale(1); /* Remove the scaling effect on hover for mobile */
+  }
 }

@@ -1,53 +1,108 @@
-.dashboard{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 35px;
+/* Dashboard.css */
+
+/* General Dashboard Styles */
+.dashboard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+  padding: 20px; /* Add some padding to prevent text from touching the edges */
 }
-.dashboard img{
-    margin-top: 150px;
+
+.dashboard img {
+  margin-top: 150px;
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Keep aspect ratio intact */
 }
-.dashboard h1{
-    text-align: center;
-    width: 70%;
-    font-size: 90px;
-    font-weight: 600;
+
+.dashboard h1 {
+  text-align: center;
+  width: 70%;
+  font-size: 90px;
+  font-weight: 600;
 }
-.dashboard h1 span{
-    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+.dashboard h1 span {
+  background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.dashboard p{
-    width: 50%;
-    text-align: center;
-    font-size: 24px;
-    line-height: 40px;
+
+.dashboard p {
+  width: 50%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 40px;
+  margin: 0 auto; /* Center paragraph on mobile */
 }
-.dashboard-container{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 50px;
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  flex-wrap: wrap; /* Allow items to wrap for small screens */
+  justify-content: center; /* Center the items */
 }
-.dashboard-connect{
-    padding: 15px 45px;
-    border-radius: 50px;
-    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 100%);
-    cursor: pointer;
+
+.dashboard-connect,
+.dashboard-resume {
+  padding: 15px 45px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
 }
-.dashboard-resume{
-    padding: 15px 45px;
-    border-radius: 50px;
-    border: 2px solid #FFF;
-    cursor: pointer;
+
+.dashboard-connect {
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 100%);
 }
-.dashboard-connect:hover{
-    border: 2px solid white;
+
+.dashboard-resume {
+  border: 2px solid #fff;
 }
-.dashboard-resume:hover{
-    border-color: #B415FF;
+
+/* Hover effects */
+.dashboard-connect:hover {
+  border: 2px solid white;
+}
+
+.dashboard-resume:hover {
+  border-color: #b415ff;
+}
+
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+  /* Dashboard Container */
+  .dashboard-container {
+    flex-direction: column; /* Stack the buttons vertically on mobile */
+    gap: 20px; /* Reduce space between buttons */
+  }
+
+  /* Dashboard Heading */
+  .dashboard h1 {
+    font-size: 50px; /* Reduce font size for mobile */
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .dashboard p {
+    width: 90%; /* Make the paragraph text width responsive */
+    font-size: 18px; /* Smaller font size for better readability */
+  }
+
+  /* Adjust the buttons */
+  .dashboard-connect,
+  .dashboard-resume {
+    width: 100%; /* Make buttons full-width on mobile */
+    padding: 15px 0; /* Vertical padding for better touch experience */
+  }
+
+  /* Adjust image */
+  .dashboard img {
+    margin-top: 50px; /* Reduce margin on mobile */
+    width: 80%; /* Make image smaller for mobile */
+  }
 }
